@@ -1,63 +1,11 @@
+html{
+    scroll-behavior: smooth;
+}
 *{
     padding: 0;
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-}
-p, h1, h2, span, a{
-    color: rgb(0, 0, 0);
-    text-decoration: none;
-}
-a:hover{
-    color: rgb(124, 124, 124);
-    cursor: pointer;
-}
-nav{
-    width: 100%;
-    height: 15vh;
-    background-color: #10181E;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-}
-.logo{
-    width: 20%;
-    height: auto;
-    background-color: rgba(255, 255, 255, .5);
-    border-radius: 10px;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-.logo img{
-    width: 100%;
-    height: auto;
-}
-.menu{
-    width: 50%;
-    height: 100%;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: end;
-    align-items: center;
-}
-.menu ul{
-    margin-right: 10%;
-    list-style: none;
-    
-    display: flex;
-    justify-content: row;
-}
-.menu ul li{
-    margin:.6vh;
-}
-.menu ul li a{
-    font-size: large;
-    color: white;
+    box-sizing: border-box;
 }
 body{
     width: 100%;
@@ -70,7 +18,63 @@ body{
     justify-content: center;
     align-items: center;
 }
-#imgprincipal{
+header{
+    width: 100%;
+    height: 15vh;
+    background-color: #10181E;
+    position: sticky;
+    top: 0;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.logo{
+    width: 20%;
+    height: auto;
+    background-color: rgba(255, 255, 255, .5);
+    border-radius: 10px;
+    box-shadow: 1px 2px 3px rgba(255, 255, 255, .1);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.logo img{
+    width: 100%;
+    height: auto;
+}
+nav{
+    width: 50%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+}
+nav ul{
+    margin-right: 10%;
+    list-style: none;
+    
+    display: flex;
+    justify-content: row;
+}
+nav ul li{
+    margin:.6vh;
+}
+nav ul li a{
+    font-size: large;
+    color: white;
+}
+nav ul li a:hover{
+    color: rgb(124, 124, 124);
+    cursor: pointer;
+}
+/* Página Inicial */
+#imgprincipal, #sobre, #noticias{
     width: 80%;
     height: auto;
     background-color: #b9c0c396;
@@ -82,22 +86,84 @@ body{
 }
 picture{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 #imgprincipal img{
     width: 70%;
     height: auto;
-    margin: 6vh 0 6vh 0;
+    margin: 6vh 0 0 0;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, .9);
+}
+figcaption{
+    width: 70%;
+    margin-bottom: 2%;
+    text-align: end;
+    font-size: small;
 }
 #imgprincipal p{
     width: 90%;
     height: auto;
     text-align: center;
-    margin: 0 0 2vh 0;
+    margin: 3% 0 3% 0;
     font-size: large;
 }
-.topo{
+#sobre h1, #noticias h1{
+    width: 100%;
+    height: auto;
+    text-align: left;
+    margin: 0 0 0 10%;
+}
+#sobre p, #noticias p{
+    width: 90%;
+    height: auto;
+    text-align: center;
+    margin: 3% 0 3% 0;
+    font-size: large;
+}
+#linknoticias{
+    text-decoration: underline;
+}
+/* Página de Elenco */
+
+/* Página Sinopse */
+#h1sinopse{
+    width: 80%;
+    height: auto;
+    background-color: #b9c0c396;
+    text-align: left;
+    padding: 2% 0 0 5%;
+}
+#ptemporada, #stemporada, #ttemporada{
+    width: 80%;
+    height: auto;
+    background-color: #b9c0c396;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#ptemporada h2, #stemporada h2, #ttemporada h2{
+    width: 100%;
+    height: auto;
+    text-align: left;
+    margin: 2% 0 0 10%;
+}
+#ptemporada p, #stemporada p, #ttemporada p{
+    width: 90%;
+    height: auto;
+    text-align: center;
+    margin: 3% 0 3% 0;
+    font-size: large;
+}
+iframe{
+    width: 80%;
+    height: 90vh;
+}
+/* Botão de voltar das páginas */
+.voltar{
     width: 80%;
     height: auto;
     background-color: #b9c0c396;
@@ -108,16 +174,22 @@ picture{
     justify-content: flex-end;
     align-items: center;
 }
-.topo span{
-    margin-top: .5vh;
-    margin-bottom: 1vh;
-    margin-right: 10%;
-    font-size: medium;
+.voltar button{
+    width: 7vh;
+    height: 7vh;
+    margin: 5vh 5vh 1vh 0;
+    padding: 5px;
+    border-radius: 50%;
+    background-color: #b9c0c396;
 }
-.topo span:hover{
-    color: rgb(68, 67, 67);
+button img{
+    width: 100%;
+    height: auto;
+}
+.voltar button:hover{
     cursor: pointer;
 }
+/* Rodapé das páginas */
 footer{
     width: 100%;
     height: 20vh;

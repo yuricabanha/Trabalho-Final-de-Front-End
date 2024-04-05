@@ -6,31 +6,50 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <link rel="stylesheet" href="css/style.css">
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <script type="text/javascript" src="js/script.js"></script>
         <title>Trailer e Sinopse de The Witcher</title>
     </head>
-    <nav>
-        <div class="logo">
-            <img src="img/the_witcher_logo.png" alt="Logo da série The Witcher">
-        </div>
-        <div class="menu">
-            <ul>
-                <li><a href="index.html" target="_self" rel="next">Início</a></li>
-                <li><a href="elenco.html" target="_self" rel="next">Elenco</a></li>
-            </ul>
-        </div>
-    </nav>
     <body>
-        <div class="topo">
-            <span><a href="index.html">Voltar para o topo da página</a></span>
+        <header>
+            <div class="logo">
+                <img src="img/the_witcher_logo.png" alt="Logo da série The Witcher">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" target="_self" rel="next">Início</a></li>
+                    <li><a href="elenco.html" target="_self" rel="next">Elenco</a></li>
+                </ul>
+            </nav>
+        </header>
+        <h1 id="h1sinopse">Sinopse</h1>
+        <div id="ptemporada">
+            <h2>1ª temporada</h2>
+            <p>O mutante geralt de rívia é um caçador de monstros que luta para encontrar seu lugar num mundo onde as pessoas muitas vezes são mais perversas que as criaturas selvagens.</p>
+            <iframe src="https://www.youtube.com/embed/tjujvMkqWe4?si=1JhAPQSFOP1jZVx7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
+        <div id="stemporada">
+            <h2>2ª temporada</h2>
+            <p>Geralt finalmente aceita seu destino: proteger Ciri das forças que lutam pelo domínio do Continente e dos poderes misteriosos que ela não sabe controlar.</p>
+            <iframe src="https://www.youtube.com/embed/UGzBVuf5_uE?si=coz1I41EswKDRkYY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div id="ttemporada">
+            <h2>3ª temporada</h2>
+            <p>O destino os uniu, mas forças perigosas tentam separá-los. Geralt e Yennefer lutam para garantir a segurança de Ciri enquanto a guerra toma conta do Continente.</p>
+            <iframe src="https://www.youtube.com/embed/TN-_xS4Kdpg?si=BXAZoPk3zGd1PTDn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div class="voltar">
+            <button class="button-scroll" onclick="scrolltop()">
+                <img src="img/seta_cima.png" alt="Imagem de uma seta para cima">
+            </button>
+        </div>
+        <footer>
+            <p>
+                Desenvolvido por Kevellyn Kariny e Yuri Cabanha &copy; <br>
+                Instituto Federal de Mato Grosso do Sul, Campus Dourados
+            </p>
+            <div class="logoif">
+                <img src="img/logo.png" alt="Logo do Instituto Federal">
+            </div>
+        </footer>
     </body>
-    <footer>
-        <p>
-            Desenvolvido por Kevellyn Kariny e Yuri Cabanha &copy; <br>
-            Instituto Federal de Mato Grosso do Sul, Campus Dourados
-        </p>
-        <div class="logoif">
-            <img src="img/logo.png" alt="Logo do Instituto Federal">
-        </div>
-    </footer>
 </html>
