@@ -1,17 +1,31 @@
-html{
-    scroll-behavior: smooth;
+@font-face {
+    font-family:"Georama", Arial, Helvetica, sans-serif;
+    src: url('https://fonts.googleapis.com/css2?family=Georama:wdth,wght@62.5..150,100..900&display=swap');
+    font-optical-sizing: auto;font-style: normal;
 }
 *{
     padding: 0;
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
 }
 body{
     width: 100%;
     height: 100%;
-    background-color: #475C5B;
-    color: rgb(0, 0, 0);
+    background-color: #1B2831;
+    color: rgb(255, 255, 255);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.corpo{
+    width: 80%;
+    height: auto;
+    background-color: #0000001c;
 
     display: flex;
     flex-direction: column;
@@ -21,7 +35,7 @@ body{
 header{
     width: 100%;
     height: 15vh;
-    background-color: #10181E;
+    background-color: #050505;
     position: sticky;
     top: 0;
 
@@ -43,7 +57,7 @@ header{
     align-items: center;
 }
 .logo img{
-    width: 100%;
+    width: 95%;
     height: auto;
 }
 nav{
@@ -66,7 +80,7 @@ nav ul li{
     margin:.6vh;
 }
 nav ul li a{
-    font-size: large;
+    font-size: x-large;
     color: white;
 }
 nav ul li a:hover{
@@ -75,9 +89,8 @@ nav ul li a:hover{
 }
 /* Página Inicial */
 #imgprincipal, #sobre, #noticias{
-    width: 80%;
+    width: 100%;
     height: auto;
-    background-color: #b9c0c396;
 
     display: flex;
     flex-direction: column;
@@ -102,7 +115,7 @@ figcaption{
     text-align: end;
     font-size: small;
 }
-#imgprincipal p{
+#imgprincipal p, #sobre p, #noticias p{
     width: 90%;
     height: auto;
     text-align: center;
@@ -115,30 +128,52 @@ figcaption{
     text-align: left;
     margin: 0 0 0 10%;
 }
-#sobre p, #noticias p{
-    width: 90%;
-    height: auto;
-    text-align: center;
-    margin: 3% 0 3% 0;
-    font-size: large;
-}
 #linknoticias{
     text-decoration: underline;
+    color: white;
 }
 /* Página de Elenco */
+#h1elenco{
+    width: 100%;
+    height: auto;
+    text-align: left;
+    padding: 2% 0 0 2%;
+}
+.personagem{
+    width: 95%;
+    height: 60vh;
+    margin: 5% 0 3% 0;
 
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.personagem img{
+    width: 30%;
+    height: 50%;
+}
+.personagem h2{
+    width: 70%;
+    height: auto;
+    margin: 1% 0 1% 1%;
+}
+.personagem p{
+    width: 60%;
+    height: auto;
+    margin: 0 0 1% 1%;
+    font-size: 1.15em;
+}
 /* Página Sinopse */
 #h1sinopse{
-    width: 80%;
+    width: 100%;
     height: auto;
-    background-color: #b9c0c396;
     text-align: left;
     padding: 2% 0 0 5%;
 }
 #ptemporada, #stemporada, #ttemporada{
-    width: 80%;
+    width: 100%;
     height: auto;
-    background-color: #b9c0c396;
 
     display: flex;
     flex-direction: column;
@@ -149,10 +184,10 @@ figcaption{
     width: 100%;
     height: auto;
     text-align: left;
-    margin: 2% 0 0 10%;
+    margin: 5% 0 0 10%;
 }
 #ptemporada p, #stemporada p, #ttemporada p{
-    width: 90%;
+    width: 80%;
     height: auto;
     text-align: center;
     margin: 3% 0 3% 0;
@@ -160,13 +195,12 @@ figcaption{
 }
 iframe{
     width: 80%;
-    height: 90vh;
+    height: 80vh;
 }
 /* Botão de voltar das páginas */
 .voltar{
-    width: 80%;
+    width: 100%;
     height: auto;
-    background-color: #b9c0c396;
     padding: 1vh 0 1vh 0; 
 
     display: flex;
@@ -175,12 +209,13 @@ iframe{
     align-items: center;
 }
 .voltar button{
-    width: 7vh;
-    height: 7vh;
+    width: 8vh;
+    height: 8vh;
     margin: 5vh 5vh 1vh 0;
     padding: 5px;
+    border-style: none;
     border-radius: 50%;
-    background-color: #b9c0c396;
+    background-color: #000000;
 }
 button img{
     width: 100%;
@@ -192,8 +227,8 @@ button img{
 /* Rodapé das páginas */
 footer{
     width: 100%;
-    height: 20vh;
-    background-color: #10181E;
+    height: 12vh;
+    background-color: #050505;
     color: rgb(255, 255, 255);
 
     display: flex;
@@ -202,16 +237,17 @@ footer{
     align-items: center;
 }
 footer p{
-    width: 90%;
+    width: 35%;
     height: auto;
     color: rgb(255, 255, 255);
-    font-size: large;
+    font-size: medium;
     text-align: end;
+    text-wrap: balance;
     padding-right: 2%;
 }
 .logoif{
     width: 5%;
-    height: 100%;
+    height: 80%;
 
     display: flex;
     flex-direction: row;
@@ -219,7 +255,79 @@ footer p{
     align-items: center;
 }
 footer img{
-    width: 100%;
-    height: auto;
+    width: auto;
+    height: 100%;
     margin-right: 25%;
+}
+/* Celulares */
+@media (max-width: 640px) {
+    header{
+        height: auto;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .logo{
+        width: 60%;
+        margin-top: 1vh;
+        margin-bottom: 1vh;
+    }
+    nav{
+        width: 100%;
+        height: auto;
+        margin-bottom: 1vh;
+    }
+    .corpo{
+        width: 100%;
+    }
+    /* Página Inicial */
+    #imgprincipal img{
+        width: 90%;
+    }
+    figcaption{
+        width: 90%;
+        font-size: medium;
+    }
+    #imgprincipal p, #sobre p, #noticias p{
+        font-size: 1.5em;
+    }
+    /* Página Elenco */
+    .personagem{
+        height: auto;
+
+        flex-direction: row;
+    }
+    .personagem img{
+        width: 50%;
+        height: auto;
+    }
+    .personagem h2{
+        width: 100%;
+    }
+    .personagem p{
+        width: 100%;
+    }
+    /* Página Sinopse */
+    iframe{
+        height: 30vh;
+    }
+    /* Botão de voltar das páginas */
+    .voltar button{
+        width: 5vh;
+        height: auto;
+        margin: 2vh 2vh 0 0;
+    }
+    /* Rodapé */
+    footer p{
+        width: 90%;
+        height: auto;
+    }
+    .logoif{
+        width: 10%;
+        height: 5vh;
+    }
+    footer img{
+        width: auto;
+        height: 100%;
+    }    
 }
